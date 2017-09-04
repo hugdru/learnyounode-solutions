@@ -1,12 +1,14 @@
 #!/usr/bin/env sh
 
+script_dir="${0%/*}"
+cd "$script_dir"
+
 package_manager='yarn'
 if ! type "$package_manager" > /dev/null; then
     package_manager='npm'
 fi
 
-script_dir="${0%/*}"
-if [ ! -d "${script_dir}/node_modules" ]; then
+if [ ! -d "node_modules" ]; then
     "$package_manager" install
 fi
 
