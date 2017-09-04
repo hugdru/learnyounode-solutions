@@ -1,0 +1,15 @@
+{
+  "name": "hugdru-learnyounode-solutions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "learnyounode"
+  },
+  "dependencies": {
+    "bl": "^1.2.1",
+    "concat-stream": "^1.6.0",
+    "learnyounode": "^3.5.10",
+    "strftime": "^0.10.0"
+  }
+}

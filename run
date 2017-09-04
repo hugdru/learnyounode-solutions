@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+package_manager='yarn'
+if ! type "$package_manager" > /dev/null; then
+    package_manager='npm'
+fi
+
+script_dir="${0%/*}"
+if [ ! -d "${script_dir}/node_modules" ]; then
+    "$package_manager" install
+fi
+
+"$package_manager" start -- "$@"
